@@ -1,0 +1,208 @@
+/* #881404850 */
+(function(o){
+o.pmdenyall = 0;o.tcfv2dh	= 884172790;o.tcfv2cvh	= 245461408;o.pmtcrec 	= 0;o.pmtcfv2thaw = function() {var h, o = _oEa, d = o.tcfv2d, cv, t, wcv = 0;var amisc = [];var cvmap = {"c:promoturp-JTTe69NJ" : "10002","c:googleana-4TXnJigR" : "10001","facebook" : "89","c:microsoft" : "10003"};o.hpmvendor = o.hpmpurpose = o.hpmsfeature = {};o.hpmcustomvendor = {};cv = o.tcfv2cv = [];if (cvmap) {/* Specifics *//* didomi */t = window.didomiState;if (o.isdef( typeof t ) && o.isdef( typeof t.didomiVendorsConsent )){t.didomiVendorsConsent.split(',').forEach(function(k) {if (k.substr(0,4)!=="iab:") {cv.push( k.substr(k.indexOf(':')+1) ) } } );wcv = 1;}}/* with __eaGenericCmpApi */if (d && d.eamode === 'tac' && (t = d.eapayload) && t.state) {var k;for(k in t.state){ /* at least one state defined */d.tcString=d.tcString||'CPjTJ1aPjTJ1aOhAAAENCZCgAAAAAAAAAAAAAAAAAAAA.YAAAAAAAAAA';if(t.state[k]){cv.push( k + '-tac' );if (k === 'eulerian' || k === 'eulerian-analytics'){d.tcString='CPjTJ1aPjTJ1aOhAAAENCZCgAAAAAAAAAAAADOwAQDOgAAAA.YAAAAAAAAAA';}} }}if (d && o.isdef(d.tcString)) {var s = d.addtlConsent;h = o.h31(d.tcString);if (h !== o.tcfv2dh) {amisc.push('gdpr_consent', d.tcString, 'pm','','pmact',((o.tcfv2dh)?'tcfrefresh':'tcfnew'));o.tcfv2dh = h;}if (d.vendor) { o.hpmvendor = d.vendor.consents||{}; }if (d.purpose) { o.hpmpurpose = d.purpose.consents||{}; }o.hpmsfeature = d.specialFeatureOptins||{};if (s) {cv.push.apply(cv,s.substr(s.indexOf('~')+1).split('.'));}wcv = 1;}if (wcv) {var acvid=[],cvid={},cvids,k,pv=0,tk,nk;cv.forEach(function(k) {if (cvmap[k]) { k = cvmap[k]; }else if ((tk = k.lastIndexOf('-'))>0) {if ((nk = cvmap[k.substr(0,tk)])) { k = nk; }}if (parseInt(Number(k)) == k) { cvid[ k ]=1; o.hpmcustomvendor[ k ] = 1; }});for (k in cvid) { acvid.push(k); }cvid=acvid.sort(function(a,b){return a-b;}); acvid=[];cvid.forEach(function(k){if(k-pv){acvid.push(k-pv);pv=k;}});cvids = acvid.join('.')||'-';h = o.h31(cvids);if (h !== o.tcfv2cvh) {amisc.push('gdpr_customvendor', cvids);o.tcfv2cvh = h;}}if (amisc.length) {o.misc('', amisc );o._mtdcrun();}};o.hpmdeny = o.hpmdeny || {};o.aInH = function(a,h) {var i=0;if (!_oEa.isobj(a)) { if (a === '*') { return 1; } a = a.split('-'); }while (i<a.length) { if (! h[ a[i++] ]) { return 0; } }return 1;};o.pmpass = function( pmcat, tcfv2vendor, tcfv2purpose, tcfv2customvendor, tcfv2sfeature ) {var o = _oEa;if (tcfv2purpose && o.aInH( tcfv2purpose, o.hpmpurpose ) &&((tcfv2vendor && o.aInH( tcfv2vendor, o.hpmvendor ))||(tcfv2customvendor && o.aInH( tcfv2customvendor, o.hpmcustomvendor ))) &&(! tcfv2sfeature || o.aInH( tcfv2sfeature, o.hpmsfeature ))) { return 1; }return 0;};
+o.website("holaislascanarias-com");if (o.isdef(typeof o.uidset )) {o.uidset("rVO1gL925adYR5oQbHk9eWLk1aV_o3rFAd8JF28r_FZL_MS6PcKBOg--");}var _EaCP = {"cgip" : o.hcgi,"tp":{"":""}};o.jsbwr = {'s'   : '//ptz2.holaislascanarias.com/w.js', /* DomWrite */'pre' : function(){ _oEaDWR.capture(); },'post': function(){ _oEaDWR.render(_oEa.b); }};if (typeof o.gloadtimeout !== 'function') {o.gloadtimeout = function( to, id, tg ) {};}/* Init/Reset prev collector run */o['_adcrun']=[]; o['_adcrunNC']=[]; o.dcids={};o.xpathdc={};o['_amtrun']=[]; o['_amtrunNC']=[]; o.mtids={};o.xpathmt={};o._arunpush = function(x,f) { _oEa[x].push(f); };o._arunpush2 = function(x,f) { _oEa._arunpush(x,f);_oEa._arunpush(x+'NC',f); };o._arun = function(x,p) { _oEa[x].forEach(function(f){f(p);}); };o.mtrun = function(nc) { _oEa._arun( '_amtrun'+((nc)?'NC':''), nc ); };o.dcrun = function(nc) { _oEa._arun( '_adcrun'+((nc)?'NC':''), nc ); };o._mtdcrun = function() {clearTimeout( _oEa._mtdcrunto );_oEa._mtdcrunto = setTimeout(function(){_oEa.mtrun();_oEa.dcrun();}, 50 );};
+o._arunpush2('_adcrun',function( nc ) { /* nc: no consent */
+var o = _oEa;
+if (!nc && o.pmdenyall) { return; }
+/* {dc:82,mode:RD,dcn:GoogleAds_Isla_LA_TiempoReal_20200922} */
+if (! o.dcids["82"]) {
+if ( !nc && o.pmpass('0',
+ '755','1-3-4',
+ '',''
+) )
+{
+o.dcids["82"]="pmpass";
+o.gloadtimeout( 5000, "dc 82", o.gloadimg("https://googleads.g.doubleclick.net/pagead/viewthroughconversion/982622601/?value=&label=4cRpCMTO4t8BEInDxtQD&guid=ON&script=0") );
+}}
+/* {dc:325,mode:RD,dcn:GoogleAds_Motivacion_Gastronomia_TiempoReal_20200922} */
+if (! o.dcids["325"]) {
+if ( !nc && o.pmpass('0',
+ '755','1-3-4',
+ '',''
+) )
+{
+o.dcids["325"]="pmpass";
+o.gloadtimeout( 5000, "dc 325", o.gloadimg("https://googleads.g.doubleclick.net/pagead/viewthroughconversion/982622601/?value=&label=lwJxCODJyd8BEInDxtQD&guid=ON&script=0") );
+}}
+/* {dc:1873,mode:RD,dcn:GoogleAds_VisitantesUltimos30DiasEntre2y4Visitas_TiempoReal_20210609} */
+if (! o.dcids["1873"]) {
+if ( !nc && o.pmpass('0',
+ '755','1-3-4',
+ '',''
+) )
+{
+o.dcids["1873"]="pmpass";
+o.gloadtimeout( 5000, "dc 1873", o.gloadimg("https://googleads.g.doubleclick.net/pagead/viewthroughconversion/982622601/?value=&label=_6eWCPDA9L4CEInDxtQD&guid=ON&script=0") );
+}}
+/* {dc:874,mode:JS,dcn:Facebook_Gastronomia_TiempoReal_20201118} */
+if (! o.dcids["874"]) {
+if ( !nc && o.pmpass('0',
+ '','1',
+ '89',''
+) )
+{
+o.dcids["874"]="pmpass";
+o.gloadeval(" _oEa.gloadimg(  \"//www.facebook.com/tr?id=1439656959574124&ev=Motivacion_Gastronomia&noscript=1\" );");
+}}
+/* {dc:1936,mode:JS,dcn:Facebook_Visitantes_TiempoReal_20210713} */
+if (! o.dcids["1936"]) {
+if ( !nc && o.pmpass('0',
+ '','1',
+ '89',''
+) )
+{
+o.dcids["1936"]="pmpass";
+o.gloadeval(" _oEa.gloadimg(  \"//www.facebook.com/tr?id=1439656959574124&ev=Visita&external_id=1180016558261813386&noscript=1\" );");
+}}
+/* {dc:1945,mode:JS,dcn:Facebook_VisitantesUltimos30DiasEntre2y4Visitas_TiempoReal_20210713} */
+if (! o.dcids["1945"]) {
+if ( !nc && o.pmpass('0',
+ '','1',
+ '89',''
+) )
+{
+o.dcids["1945"]="pmpass";
+o.gloadeval("_oEa.gloadimg(\"//www.facebook.com/tr?id=1439656959574124&ev=Eulerian-1605202219809485471&noscript=1\");");
+}}
+/* {dc:7588,mode:SS,post,dcn:Facebook_Visitantes_TiempoReal_20230511} */
+if (! o.dcids["7588"]) {
+if ( !nc && o.pmpass('0',
+ '','1-3-4',
+ '89',''
+) )
+{
+o.dcids["7588"]="pmpass";
+}}
+});
+o._arunpush2('_amtrun',function( nc ) {
+var o = _oEa;
+o.xpathmt = o.xpathmt || {};
+o.mtids = o.mtids || {};
+if (o.pmdenyall) { return; }
+if (! o.mtids["10"]) {
+/* {ccmt:10,ccmth:10,isnative,view:0,hdlr:tag,mtpmcat:,ccmtn:googleanalytics-cm} */
+if ( !nc && o.pmpass('',
+ '','1-8',
+ '10001',''
+) )
+{
+o.mtids["10"]="pmpass";
+try{
+/* Native */
+if(_oEa.isdef(typeof window.ga)){window.ga(function(tracker){var clientId=tracker ? tracker.get('clientId'):'';if(!clientId.length){var value="; "+window.document.cookie,parts=value.split("; _ga=");if(parts.length===2){clientId=parts.pop().split(";").shift();}}if(!clientId.length){return '';}_oEa.gloadtimeout(5000,"EMfNwnYS.kZtdivW2VTeVAdI.fYQiGrHZNMbin8-",_oEa.gloadimg("//ptz2.holaislascanarias.com/rpset/holaislascanarias-com/881404850?gacid="+clientId));});}
+ /* /mtjs */
+}catch(e){if (o.logsend){o.logsend('mt','10',e);}else{o.log('mt',e);}}
+}
+}
+if (! o.mtids["19"]) {
+/* {ccmt:19,ccmth:19,isnative,view:0,hdlr:tag,mtpmcat:,ccmtn:google-invite-cm} */
+if ( !nc && o.pmpass('',
+ '755','1-3-4',
+ '',''
+) )
+{
+o.mtids["19"]="pmpass";
+try{
+/* Native */
+_oEa.gloadtimeout(5000,"EMfNwnYS.kZtdivW2Xzd6wTuvX27WGVl5zbbhj0-",_oEa.gloadimg("https://cm.g.doubleclick.net/pixel?google_nid=eulerian_dmp&google_cm&google_hm=1180016558261813386&ethost=ptz2.holaislascanarias.com&etws=holaislascanarias-com"));
+ /* /mtjs */
+}catch(e){if (o.logsend){o.logsend('mt','19',e);}else{o.log('mt',e);}}
+}
+}
+if (! o.mtids["28"]) {
+/* {ccmt:28,ccmth:28,isnative,view:0,hdlr:tag,mtpmcat:,ccmtn:thetradedesk-cm} */
+if ( !nc && o.pmpass('',
+ '21','1-3-4',
+ '',''
+) )
+{
+o.mtids["28"]="pmpass";
+try{
+/* Native */
+_oEa.gloadtimeout(5000,"EMfNwnYS.kZtdivW2QcYFpMJTV4Zk0msvbBx4eY-",_oEa.gloadimg("//match.adsrvr.org/track/cmf/generic?ttd_pid=mit4gnn&ttd_tpi=1&ttd_puid=ptz2.holaislascanarias.com&ttd_puid=holaislascanarias-com&gdpr=1&gdpr_consent=CPusOQAPusOQAAHABBENDMCoAP_AAE7AAAiQF5wBwAKgAgABkAIQAzoCBQF5gXnAFAAqACAAGQAhAF5gAAAA.f_gACdgAAAAA&domain=holaislascanarias.com"));
+ /* /mtjs */
+}catch(e){if (o.logsend){o.logsend('mt','28',e);}else{o.log('mt',e);}}
+}
+}
+if (! o.mtids["883"]) {
+/* {ccmt:883,ccmth:883,isnative,view:0,hdlr:tag,mtpmcat:,ccmtn:adform-cm} */
+if ( !nc && o.pmpass('',
+ '50','1-3-4',
+ '',''
+) )
+{
+o.mtids["883"]="pmpass";
+try{
+/* Native */
+_oEa.gloadtimeout(5000,"DEQwyRwgEDJm_8YpRfgLcwfGMARWKlVbqxu07APF",_oEa.gloadimg("https://c1.adform.net/serving/cookie/match?party=1149&url=https://ptz2.holaislascanarias.com/rpset/holaislascanarias-com/881404850?adfrmid={ADFORM_ID}"));
+ /* /mtjs */
+}catch(e){if (o.logsend){o.logsend('mt','883',e);}else{o.log('mt',e);}}
+}
+}
+if (! o.mtids["928"]) {
+/* {ccmt:928,ccmth:928,isjs,view:0,hdlr:tag,mtpmcat:,ccmtn:[Google Ads] 3m conversion} */
+if ( !nc && o.pmpass('',
+ '755','1-3-4',
+ '',''
+) )
+{
+o.mtids["928"]="pmpass";
+o.onload(function(){
+try{
+/* JS */
+  o.gloadtimeout(
+   5000,
+   "DEQwyRwgEDJm_8YpRfiolpbOLbgTB9gxPwCOQNYE",
+ o.gloadjs(
+   "https://www.googletagmanager.com/gtag/js?id=AW-982622601"
+   , function(){ window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-982622601');
+gtag('event', 'conversion', {'send_to': 'AW-982622601/5ZE-CJzTk4ACEInDxtQD'});
+EA_event('Fire-928-TMS'); }
+  )
+ );
+ /* /!mtembedjs */
+ /* /mtjs */
+}catch(e){if (o.logsend){o.logsend('mt','928',e);}else{o.log('mt',e);}}
+return        true;
+});
+}
+}
+if (! o.mtids["1540"]) {
+/* {ccmt:1513,ccmth:1540,isjs,view:0,hdlr:tag,mtpmcat:,ccmtn:DL_Ultima-visita} */
+if ( !nc && o.pmpass('',
+ '413','1-2-3-4-5-6-7-8-9-10',
+ '',''
+) )
+{
+o.mtids["1540"]="pmpass";
+try{
+/* JS */
+_oEa.uparam({'lastVisit':'20230710'});
+ /* !mtjssrc */
+ /* /!mtembedjs */
+ /* /mtjs */
+}catch(e){if (o.logsend){o.logsend('mt','1513',e);}else{o.log('mt',e);}}
+}
+}
+if (! o.mtids["1738"]) {
+/* {ccmt:1693,ccmth:1738,isnative,view:0,hdlr:tag,mtpmcat:,ccmtn:appnexus-cm} */
+if ( !nc && o.pmpass('',
+ '32','1-3-4',
+ '',''
+) )
+{
+o.mtids["1738"]="pmpass";
+try{
+/* Native */
+_oEa.gloadtimeout(5000,"8lL.QlYVeQ7BL6AqQORYnwjBZtPbNcgvEo3IRX72fg--",_oEa.gloadimg("https://ib.adnxs.com/getuid?https://ptz2.holaislascanarias.com/rpset/holaislascanarias-com/881404850?apnxsid=%24UID"));
+ /* /mtjs */
+}catch(e){if (o.logsend){o.logsend('mt','1693',e);}else{o.log('mt',e);}}
+}
+}
+});
+o.waitPM = function(f) {var o = _oEa;if (! o.tcfv2d) {setTimeout( f, 100 );return 1;}o.pmtcfv2thaw();return 0;};o.tcfv2load();o.mtdcrun = function() {var o = _oEa;if (o.waitPM( o.mtdcrun )) { return; }o._mtdcrun();};o.mtdcrunNC = function() {var o = _oEa;o.dcrun(1);o.mtrun(1);};o.mtdcrunNC();o.mtdcrun();/* end !pmistcfv2 */o.websiteend();
+})(_oEa);

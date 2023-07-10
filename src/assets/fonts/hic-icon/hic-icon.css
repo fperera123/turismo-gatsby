@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'hic-icon-font';
+    src: url('hic-icon-font.woff2') format('woff2'),
+        url('hic-icon-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

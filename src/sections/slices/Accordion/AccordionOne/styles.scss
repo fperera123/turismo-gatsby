@@ -1,0 +1,58 @@
+@import "@/styles/scss/_variables";
+
+.accordion-header {
+
+    &:hover{
+        background-color: $lightShade;
+    }
+
+    .accordion-button {
+        background-color: transparent;
+        box-shadow: none;
+        color: $secondaryShade;
+
+        &:focus {
+            border-color: transparent;
+            outline: 0;
+            box-shadow: none;
+        }
+
+        &::after {
+            background-image: none;
+            content: none;
+        }
+
+        .closed {
+            display: none;
+        }
+
+        .opened {
+            display: block;
+        }
+
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-left: auto;
+            background-repeat: no-repeat;
+            background-size: 1.25rem;
+            transition: -webkit-transform 0.2s ease-in-out;
+            transition: transform 0.2s ease-in-out;
+            transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+        }
+
+        &:not(.collapsed) {
+            color: $primary;
+        }
+
+        &.collapsed {
+            .closed {
+                display: block;
+            }
+
+            .opened {
+                display: none;
+            }
+        }
+    }
+}
