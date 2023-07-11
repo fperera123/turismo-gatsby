@@ -48,10 +48,10 @@ export default function ContactOne({ data }) {
                             <Content.Text as='p' className='whitespace-nowrap hover:text-primaryShade'>(+965) 60 05 9169 </Content.Text>
                         </div>
                     </Link>
-                    <Link dir="ltr" className="hover:text-primaryShade" to="mailto:info@bettermoveco.com">
+                    <Link dir="ltr" className="hover:text-primaryShade" to="mailto:info@temp.deviitor.com">
                         <div className='flex items-center justify-center w-full'>
                             <i className='fal fa-envelope fa-2x mr-2'></i>
-                            <Content.Text as='p' className='whitespace-nowrap hover:text-primaryShade'>info@bettermoveco.com</Content.Text>
+                            <Content.Text as='p' className='whitespace-nowrap hover:text-primaryShade'>info@temp.deviitor.com</Content.Text>
                         </div>
                     </Link>
                 </div>
@@ -59,7 +59,7 @@ export default function ContactOne({ data }) {
                     <Link rel="nofollow" className="hover:text-black" to="https://wa.me/96599341116">
                         <i className='fab fa-whatsapp fa-2x'></i>
                     </Link>
-                    <Link rel="nofollow" className="hover:text-black" to="https://facebook.com/bettermovecokw">
+                    <Link rel="nofollow" className="hover:text-black" to="https://facebook.com/temp.deviitor">
                         <i className='fab fa-facebook fa-2x'></i>
                     </Link>
                     <Link rel="nofollow" className="hover:text-black" to="https://www.instagram.com/better_move_co/">

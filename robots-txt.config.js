@@ -1,5 +1,5 @@
 module.exports = {
-    host: 'https://bettermoveco.com',
-    sitemap: 'https://bettermoveco.com/*',
+    host: 'https://temp.deviitor.com',
+    sitemap: 'https://temp.deviitor.com/*',
     policy: [{ userAgent: '*'}]
 };

@@ -7,6 +7,11 @@ import { GlobalHeaderProvider } from "./src/context/GlobalHeaderContext";
 import "./src/styles/scss/bootstrap.scss";
 import "./src/styles/scss/global.scss";
 import "./src/styles/tailwind-output.css";
+import './src/assets/fonts/hic-icon/hic-icon.css'
+import "./src/assets/clone/styles.scss";
+import "./src/assets/clone/styles1.css";
+import "./src/assets/clone/styles2.css";
+import "./src/assets/clone/styles3.css";
 import "./src/assets/clone/global.js";
 import "./src/assets/clone/me_video_plyr_setup.js";
 import "./src/assets/clone/navigation.js";

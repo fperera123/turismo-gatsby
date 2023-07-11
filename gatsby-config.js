@@ -22,6 +22,9 @@ const strapiConfig = {
         },
         'slices': {
           populate: {
+            titleVideo: {
+              populate: '*',
+            },
             titleParagraph: {
               populate: '*',
             },
@@ -102,7 +105,7 @@ const strapiConfig = {
     }],
 };
 
-const siteUrl = process.env.SITE_URL || 'https://bettermoveco.com'
+const siteUrl = process.env.SITE_URL || 'https://temp.deviitor.com'
 
 module.exports = {
   siteMetadata: {

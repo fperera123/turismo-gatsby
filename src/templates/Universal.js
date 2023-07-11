@@ -20,27 +20,321 @@ import NotificationModalOne from '../sections/PopupModal/NotificationModalOne/No
 import NavbarTwo from "@/sections/Navbar/NavbarTwo";
 import InstagramPost from "@/sections/slices/InstagramPost";
 import YouTubeVideo from "@/sections/slices/YouTubeVideo";
+import ParagraphOnly from "@/sections/slices/ParagraphOnly/ParagraphOnly";
+
+import logoES_DarkMenu_0 from '../assets/clone/logoES_DarkMenu_0.png';
+import logoES_Hover_0_0 from '../assets/clone/logoES_Hover_0_0.png';
+import logoES_DarkMenu_0_0 from '../assets/clone/logoES_DarkMenu_0_0.png';
+
+import GASTRO_SAUZAL_140420 from '../assets/clone/26_GASTRO_SAUZAL_140420.mp4';
+import ROQUENUBLO_210120_loop from '../assets/clone/20_ROQUENUBLO_210120_loop.mp4';
+
+// export const query = graphql`
+//   query GetSingleUniversal($slug: String, $locale: String){
+//     navBarTwo: strapiNavBarTwo  (locale: {eq: $locale}){
+//       sections {
+//         ... on STRAPI__COMPONENT_SHARED_DROPDOWN_LINK {
+//           __typename
+//           id
+//           dropdown {
+//             icon
+//             target
+//             title
+//             to
+//           }
+//           dropdownItems {
+//             target
+//             title
+//             icon
+//             to
+//           }
+//         }
+//         ... on STRAPI__COMPONENT_SHARED_LINK_ITEM {
+//           __typename
+//           id
+//           title
+//           to
+//           target
+//           icon
+//         }
+//       }
+//     }
+
+//     universal: strapiUniversal(slug: {eq: $slug}) {
+//       id
+//       slug
+
+//       metaTitle,
+//       metaDescription,
+//       ogTitle,
+//       ogDescription,
+//       ogImage {
+//         localFile {
+//           childImageSharp {
+//             gatsbyImageData
+//           }
+//         }
+//       }
+//       jsonLD{
+//         internal{
+//           content
+//         }
+//       }
+
+//       lang
+//       direction
+
+//       slices {
+//         ... on STRAPI__COMPONENT_SLICES_PARAGRAPH_WITH_TITLE  {
+//             __typename
+//             id
+//             titleMarkdown{
+//                 title
+//                 markdown{
+//                   data{
+//                     markdown
+//                   }
+//                 }
+//                 titleHtmlTag
+//             }
+//           }
+//         ... on STRAPI__COMPONENT_SLICES_HERO_ONE {
+//             __typename
+//             id
+//             titleParagraphImage{
+//                 title
+//                 paragraph
+//                 titleHtmlTag
+//                 image {
+//                   localFile {
+//                     childImageSharp {
+//                       gatsbyImageData
+//                     }
+//                   }
+//                 }
+//                 imageAlt
+//             }
+//           }
+//           ... on STRAPI__COMPONENT_SLICES_CONTENT_WITH_IMAGE {
+//             __typename
+//             id
+//             contentWithImageBasicImage : basicImage {
+//               imageAlt
+//               imageOrder
+//               imageTitle
+//               image {
+//                 localFile {
+//                   childImageSharp {
+//                     gatsbyImageData
+//                   }
+//                 }
+//               }
+//             }
+//             contentWithImageTitleMarkdown : titleMarkdown {
+//               title
+//               titleHtmlTag
+//               markdown {
+//                 data {
+//                   markdown
+//                 }
+//               }
+//             }
+//           }
+//           ... on STRAPI__COMPONENT_SLICES_CONTENT_WITH_IMAGE_AND_LIST{
+//             __typename
+//             id
+//             contentWithImageTitleMarkdownImage: titleMarkdownImage{
+//                 title
+//                 markdown{
+//                   data{
+//                     markdown
+//                   }
+//                 }
+//                 titleHtmlTag
+//                 image {
+//                     localFile {
+//                       childImageSharp {
+//                         gatsbyImageData
+//                       }
+//                     }
+//                   }
+//                 imageAlt
+//             }
+//             unorderedList {
+//               text
+//               icon
+//             }
+//             sliceWidth,
+//           }
+//           ... on STRAPI__COMPONENT_SLICES_REVIEW_ONE {
+//             __typename
+//             id
+//            reviewOneItem{
+//             text
+//             customerName
+//             customerPosition
+//             imageAlt
+//            }
+//           }
+//           ... on STRAPI__COMPONENT_SLICES_GALLERY_ONE {
+//             __typename
+//             id
+//             imageGrid{
+//             image {
+//               localFile {
+//                 childImageSharp {
+//                   gatsbyImageData
+//                 }
+//               }
+//             }
+//             imageAlt
+//            }
+//           }
+//           ... on STRAPI__COMPONENT_SLICES_ACCORDION_ONE {
+//               __typename
+//               id
+//               label
+//               titleMarkdown {
+//                 title
+//                 markdown {
+//                   data {
+//                     markdown
+//                   }
+//                 }
+//                 titleHtmlTag
+//               }
+//               accordionItems {
+//                 item {
+//                   markdown {
+//                     data {
+//                       markdown
+//                     }
+//                   }
+//                   titleHtmlTag
+//                   title
+//                   hasLink,
+//                   to
+//                   icon
+//                   target
+//                 }
+//               }
+//           }
+//           ... on STRAPI__COMPONENT_SLICES_NOTIFICATION_MODAL_ONE {
+//             __typename
+//             id
+//             titleMarkdown {
+//               markdown {
+//                 data {
+//                   markdown
+//                 }
+//               }
+//               title
+//               titleHtmlTag
+//             }
+//             basicImage {
+//               imageAlt
+//               imageOrder
+//               imageTitle
+//               image {
+//                 localFile {
+//                   childImageSharp {
+//                     gatsbyImageData
+//                   }
+//                 }
+//               }
+//             }
+//             promotion {
+//               expiresAt
+//               couponCode
+//               showCallToActions
+//             }
+//             showAfter
+//             hasPromotion
+//             hasImage
+//             hasTitleMarkdown
+//           }
+//           ... on STRAPI__COMPONENT_SLICES_INSTAGRAM_POST_ONE {
+//             __typename
+//             id
+//             link
+//           }
+//           ... on STRAPI__COMPONENT_SLICES_YOUTUBE_ONE {
+//             __typename
+//             id
+//             videoId
+//           }
+//       }
+//     }
+//   }
+// `
+
+// export function Head({ location, data: { universal } }) {
+//   const siteRoot = process.env.SITE_URL;
+
+//   const {
+//     metaTitle,
+//     metaDescription,
+//     ogTitle,
+//     ogDescription,
+//     ogImage,
+//     jsonLD,
+
+//     lang,
+//     direction,
+//   } = universal;
+
+//   const src = getSrc(ogImage.localFile);
+
+//   const { internal: { content } } = jsonLD;
+
+//   return (
+//     <>
+//       <title>{metaTitle}</title>
+//       <meta name="description" content={metaDescription} />
+
+//       <meta property="og:title" content={ogTitle} />
+//       <meta property="og:description" content={ogDescription} />
+//       <meta property="og:url" content={`${siteRoot}${location.pathname}`} />
+//       <meta property="og:image" content={`${siteRoot}${src}`} />
+
+//       <meta property="og:type" content="website" />
+//       <meta name="twitter:card" content="summary_large_image" />
+
+//       <meta name="robots" content="index, archive, follow" />
+
+//       <link rel="canonical" href={`${siteRoot}${location.pathname}`} />
+
+//       <link rel="alternate" hrefLang="en" href={`${siteRoot}${location.pathname}`} />
+//       <link rel="alternate" hrefLang="ar" href={`${siteRoot}/ar${location.pathname}`} />
+
+//       <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-alpha13/dist/js/index.min.js"></script>
+
+//       <script type="application/ld+json">
+//         {
+//           content
+//         }
+//       </script>
+
+//       <meta name="google-site-verification" content="gFlzkaJIn3EpMd-fNjBPJITQYwc3KWmcABnFm4eF8Ac" />
+//       <meta name="ahrefs-site-verification" content="267619e8af15f5eaef9bef029030405b8556d477a4a7043ed158c74f7a29b7cc" />
+
+//       <Helmet
+//         htmlAttributes={{
+//           lang: lang,
+//           dir: direction,
+//         }}
+//       />
+
+//     </>
+//   )
+// }
 
 export const query = graphql`
-  query GetSingleUniversal($slug: String, $locale: String){
+  query GetSingleUniversal($slug: String, $locale: String ){
+
     navBarTwo: strapiNavBarTwo  (locale: {eq: $locale}){
       sections {
-        ... on STRAPI__COMPONENT_SHARED_DROPDOWN_LINK {
-          __typename
-          id
-          dropdown {
-            icon
-            target
-            title
-            to
-          }
-          dropdownItems {
-            target
-            title
-            icon
-            to
-          }
-        }
+
         ... on STRAPI__COMPONENT_SHARED_LINK_ITEM {
           __typename
           id
@@ -77,249 +371,25 @@ export const query = graphql`
       direction
 
       slices {
-        ... on STRAPI__COMPONENT_SLICES_PARAGRAPH_WITH_TITLE  {
-            __typename
-            id
-            titleMarkdown{
-                title
-                markdown{
-                  data{
-                    markdown
-                  }
-                }
-                titleHtmlTag
-            }
-          }
         ... on STRAPI__COMPONENT_SLICES_HERO_ONE {
             __typename
             id
-            titleParagraphImage{
+            titleVideo{
                 title
-                paragraph
-                titleHtmlTag
-                image {
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData
-                    }
-                  }
+                video {
+                  url
                 }
-                imageAlt
             }
           }
-          ... on STRAPI__COMPONENT_SLICES_CONTENT_WITH_IMAGE {
-            __typename
-            id
-            contentWithImageBasicImage : basicImage {
-              imageAlt
-              imageOrder
-              imageTitle
-              image {
-                localFile {
-                  childImageSharp {
-                    gatsbyImageData
-                  }
-                }
-              }
-            }
-            contentWithImageTitleMarkdown : titleMarkdown {
-              title
-              titleHtmlTag
-              markdown {
-                data {
-                  markdown
-                }
-              }
-            }
-          }
-          ... on STRAPI__COMPONENT_SLICES_CONTENT_WITH_IMAGE_AND_LIST{
-            __typename
-            id
-            contentWithImageTitleMarkdownImage: titleMarkdownImage{
-                title
-                markdown{
-                  data{
-                    markdown
-                  }
-                }
-                titleHtmlTag
-                image {
-                    localFile {
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                imageAlt
-            }
-            unorderedList {
-              text
-              icon
-            }
-            sliceWidth,
-          }
-          ... on STRAPI__COMPONENT_SLICES_REVIEW_ONE {
-            __typename
-            id
-           reviewOneItem{
-            text
-            customerName
-            customerPosition
-            imageAlt
-           }
-          }
-          ... on STRAPI__COMPONENT_SLICES_GALLERY_ONE {
-            __typename
-            id
-            imageGrid{
-            image {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData
-                }
-              }
-            }
-            imageAlt
-           }
-          }
-          ... on STRAPI__COMPONENT_SLICES_ACCORDION_ONE {
-              __typename
-              id
-              label
-              titleMarkdown {
-                title
-                markdown {
-                  data {
-                    markdown
-                  }
-                }
-                titleHtmlTag
-              }
-              accordionItems {
-                item {
-                  markdown {
-                    data {
-                      markdown
-                    }
-                  }
-                  titleHtmlTag
-                  title
-                  hasLink,
-                  to
-                  icon
-                  target
-                }
-              }
-          }
-          ... on STRAPI__COMPONENT_SLICES_NOTIFICATION_MODAL_ONE {
-            __typename
-            id
-            titleMarkdown {
-              markdown {
-                data {
-                  markdown
-                }
-              }
-              title
-              titleHtmlTag
-            }
-            basicImage {
-              imageAlt
-              imageOrder
-              imageTitle
-              image {
-                localFile {
-                  childImageSharp {
-                    gatsbyImageData
-                  }
-                }
-              }
-            }
-            promotion {
-              expiresAt
-              couponCode
-              showCallToActions
-            }
-            showAfter
-            hasPromotion
-            hasImage
-            hasTitleMarkdown
-          }
-          ... on STRAPI__COMPONENT_SLICES_INSTAGRAM_POST_ONE {
-            __typename
-            id
-            link
-          }
-          ... on STRAPI__COMPONENT_SLICES_YOUTUBE_ONE {
-            __typename
-            id
-            videoId
-          }
+        ... on STRAPI__COMPONENT_SLICES_PARAGRAPH_ONLY {
+          __typename
+          id
+          paragraph
+        }
       }
     }
   }
 `
-
-export function Head({ location, data: { universal } }) {
-  const siteRoot = process.env.SITE_URL;
-
-  const {
-    metaTitle,
-    metaDescription,
-    ogTitle,
-    ogDescription,
-    ogImage,
-    jsonLD,
-
-    lang,
-    direction,
-  } = universal;
-
-  const src = getSrc(ogImage.localFile);
-
-  const { internal: { content } } = jsonLD;
-
-  return (
-    <>
-      <title>{metaTitle}</title>
-      <meta name="description" content={metaDescription} />
-
-      <meta property="og:title" content={ogTitle} />
-      <meta property="og:description" content={ogDescription} />
-      <meta property="og:url" content={`${siteRoot}${location.pathname}`} />
-      <meta property="og:image" content={`${siteRoot}${src}`} />
-
-      <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary_large_image" />
-
-      <meta name="robots" content="index, archive, follow" />
-
-      <link rel="canonical" href={`${siteRoot}${location.pathname}`} />
-
-      <link rel="alternate" hrefLang="en" href={`${siteRoot}${location.pathname}`} />
-      <link rel="alternate" hrefLang="ar" href={`${siteRoot}/ar${location.pathname}`} />
-
-      <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-alpha13/dist/js/index.min.js"></script>
-
-      <script type="application/ld+json">
-        {
-          content
-        }
-      </script>
-
-      <meta name="google-site-verification" content="gFlzkaJIn3EpMd-fNjBPJITQYwc3KWmcABnFm4eF8Ac" />
-      <meta name="ahrefs-site-verification" content="267619e8af15f5eaef9bef029030405b8556d477a4a7043ed158c74f7a29b7cc" />
-
-      <Helmet
-        htmlAttributes={{
-          lang: lang,
-          dir: direction,
-        }}
-      />
-
-    </>
-  )
-}
 
 export default function Home({
   data: {
@@ -350,9 +420,8 @@ export default function Home({
 
   return (
     <PageWrapper>
-      <TopBar />
-      {/* <Navbar direction={direction} items={items} /> */}
-      <NavbarTwo direction={direction} sections={sections} />
+      {/* <TopBar />
+
       {slices.map(slice => {
         switch (slice.__typename) {
           case "STRAPI__COMPONENT_SLICES_PARAGRAPH_WITH_TITLE":
@@ -388,9 +457,49 @@ export default function Home({
           default:
             return null;
         }
-      })}
-      <ContactOne />
-      <Footer />
+      })} */}
+      <div class="page-content">
+        <NavbarTwo direction={direction} sections={sections} />
+        {
+          slices.map(slice => {
+            switch (slice.__typename) {
+              case "STRAPI__COMPONENT_SLICES_HERO_ONE":
+                return <HeroOne key={slice.id} data={slice} />
+
+              default:
+                return null;
+            }
+          })
+        }
+      </div>
+      <div class="layout-content">
+        <div class="region region-content">
+          <div
+            id="block-hic-front-theme-content"
+            class="block block-system block-system-main-block"
+          >
+
+            <article
+              role="article"
+              about="https://www.holaislascanarias.com/gastronomia-canaria/"
+              class="node node--type-motivation-distribution node--view-mode-full"
+            >
+              {
+                slices.map(slice => {
+                  switch (slice.__typename) {
+                    case "STRAPI__COMPONENT_SLICES_PARAGRAPH_ONLY":
+                      return <ParagraphOnly key={slice.id} data={slice} />
+
+                    default:
+                      return null;
+                  }
+                })
+              }
+
+            </article>
+          </div>
+        </div>
+      </div>
       <div className="sm:w-1/3 hidden"></div>
 
     </PageWrapper>

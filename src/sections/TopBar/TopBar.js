@@ -12,7 +12,7 @@ export default function TopBar() {
                     <Link rel="nofollow" className="hover:text-black" to="https://wa.me/96599341116">
                         <i className='fab fa-whatsapp fa-2x'></i>
                     </Link>
-                    <Link rel="nofollow" className="hover:text-black" to="https://facebook.com/bettermovecokw">
+                    <Link rel="nofollow" className="hover:text-black" to="https://facebook.com/temp.deviitor">
                         <i className='fab fa-facebook fa-2x'></i>
                     </Link>
                     <Link rel="nofollow" className="hover:text-black" to="https://www.instagram.com/better_move_co/">
@@ -27,10 +27,10 @@ export default function TopBar() {
                             <span className='whitespace-nowrap'>(+965) 99 34 1116 </span>
                         </div>
                     </Link>
-                    <Link className="hover:text-black" to="mailto:info@bettermoveco.com">
+                    <Link className="hover:text-black" to="mailto:info@temp.deviitor.com">
                         <div className='flex items-center'>
                             <i className='fal fa-envelope fa-2x mr-2'></i>
-                            <span className='whitespace-nowrap'>info@bettermoveco.com</span>
+                            <span className='whitespace-nowrap'>info@temp.deviitor.com</span>
                         </div>
                     </Link>
                 </div>

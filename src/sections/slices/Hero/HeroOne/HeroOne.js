@@ -2,71 +2,51 @@ import React from 'react'
 import { GatsbyImage as Img, getImage } from 'gatsby-plugin-image'
 import Content from "../../contentStyles"
 
-export default function HeroOne({ data: { titleParagraphImage } }) {
+import GASTRO_SAUZAL_140420 from './../../../../assets/clone/26_GASTRO_SAUZAL_140420.mp4';
+
+export default function HeroOne({ data: { titleVideo } }) {
+  const { title, video } = titleVideo;
   return (
-    <div
-      id="carouselDarkVariant"
-      className="carousel slide carousel-fade relative"
-      data-bs-ride="carousel"
-    >
-      <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-        <button
-          data-bs-target="#carouselDarkVariant"
-          data-bs-slide-to="0"
-          className="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          data-bs-target="#carouselDarkVariant"
-          data-bs-slide-to="1"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          data-bs-target="#carouselDarkVariant"
-          data-bs-slide-to="2"
-          aria-label="Slide 1"
-        ></button>
-      </div>
+    <div class="region region-primary-menu">
+      <div id="block-hic-common-header" class="block block-">
+        <div id="header_hic" class="header dark height-big">
+          <div id="video_dynamic" class="background_video dktH-center dktV-middle" data-video_dynamic="true" data-customizationexists="1" data-nid="21" data-videoid="video_21_desktop" data-typedinamic="video_local">
 
-      <div className="carousel-inner relative w-full overflow-hidden h-[calc(100vw*9/16-9rem)] min-h-[10rem]">
-        {
-          titleParagraphImage.map((node, index) => {
-            const { title, paragraph, titleHtmlTag, image, imageAlt } = node
+            <article class="media media--type-video-local media--view-mode-banner-video-local">
 
-            return <div key={index} className={"carousel-item relative float-left w-full h-full " + (index == 0 ? 'active' : '')} >
-              <Img className='w-full h-full brightness-50 0' image={getImage(image.localFile)} alt={imageAlt} layout="fullWidth" placeholder="blurred" />
-              <div className="carousel-caption hidden md:block absolute">
-                <Content.Title as={titleHtmlTag} className="!text-secondaryShade text-center">
-                  {title}
-                </Content.Title>
-                <Content.Text as="p" className='!text-lightShade text-center'>
-                  {paragraph}
-                </Content.Text>
+              <div class="local-video-desktop" data-video-width="1920" data-video-height="1080">
+
+                <div class="field field--name-field-media-video-file field--type-file field--label-visually_hidden">
+                  <div class="field__label visually-hidden">{ title }</div>
+                  <div class="field__item">
+                    <video autoplay="autoplay" loop="loop" muted="muted" width="1920" height="1080" class="js-plyr" playsinline="playsinline" styles="width: auto; height: 116.019%;">
+                      <source src={video.url} type="video/mp4" />
+                    </video>
+
+                  </div>
+                </div>
+
               </div>
+
+
+            </article>
+
+          </div>
+          <div class="background_video_mov mblH-center mblV-middle" data-video_dynamic="true" data-nid="21" data-videoid="video_21_mobile" data-typedinamic="video_local">
+          </div>
+
+          <div class="content hor-align-center-ml ver-align-down-ml subtitle-down">
+            <div class="titles">
+              <h1 class="title font-width-bold large text-white">
+                { title }
+              </h1>
             </div>
-          })
-        }
+
+          </div>
+        </div>
 
       </div>
-      <button
-        className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-        type="button"
-        data-bs-target="#carouselDarkVariant"
-        data-bs-slide="prev"
-      >
-        <span className="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-        type="button"
-        data-bs-target="#carouselDarkVariant"
-        data-bs-slide="next"
-      >
-        <span className="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
+
     </div>
   )
 }

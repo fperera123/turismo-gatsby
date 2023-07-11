@@ -6,13 +6,6 @@ import Content from "@/sections/slices/contentStyles"
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 
-import './../../assets/fonts/hic-icon/hic-icon.css'
-import './styles.scss'
-import './styles1.css'
-import './styles2.css'
-import './styles3.css'
-
-
 import logoES_DarkMenu_0 from '../../assets/clone/logoES_DarkMenu_0.png';
 import logoES_Hover_0_0 from '../../assets/clone/logoES_Hover_0_0.png';
 import logoES_DarkMenu_0_0 from '../../assets/clone/logoES_DarkMenu_0_0.png';
@@ -426,26 +419,7 @@ export default function NewPage() {
 
                                 <div class="node__content">
 
-                                    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="300" data-aos-once="true" class="layout hic_layout_one_02 fullwitdh num-col--1 wrapper-layout wow fadeIn" data-valign1="valigntop" id="section--Px-iuDEBP1I" data-wow-duration="0.1s" styles="visibility: visible; animation-duration: 0.1s; animation-name: fadeIn;">
-                                        <div class="row-wrapper">
-                                            <div class="row one-02">
-                                                <div class="column"></div>
-                                                <div class="column valigntop">
 
-                                                    <div id="me-title-eda79666-cd51-4be7-ae04-a0e417be7349" class="block block-layout-builder block-inline-blockme-title left line-down medium text-black">
-
-
-
-                                                        <p class="field field--name-field-me-t-title field--type-string-long field--label-hidden field__item">La cocina canaria se caracteriza por el mestizaje, la fusión de elementos y un pronunciado contraste de sabores, fruto de unos productos e ingredientes de gran calidad. Después de pasar un largo día en la playa, recorrer sus espacios naturales o dar un agradable paseo por sus atractivas localidades, no hay nada mejor que disfrutar de las delicias de la gastronomía de las islas. Para los canarios, la comida es parte de su identidad, de vital importancia en su cultura y en su día a día y, por eso, es fácil encontrar buenos sitios donde comer.</p>
-
-
-                                                    </div>
-
-                                                </div>
-                                                <div class="column"></div>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="300" data-aos-once="true" class="layout hic_layout_one_00 boxed num-col--1 wrapper-layout wow fadeIn" data-valign1="valigntop" id="section--zf999SiakXg" data-wow-duration="0.1s" styles="visibility: visible; animation-duration: 0.1s; animation-name: fadeIn;">
                                         <div class="row-wrapper">

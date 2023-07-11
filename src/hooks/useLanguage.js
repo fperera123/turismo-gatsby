@@ -4,11 +4,14 @@ import { useLocation } from '@reach/router';
 const useLanguage = () => {
     const location = useLocation();
 
-    const languagePrefix = _getLanguagePrefix(location);
+    // const languagePrefix = _getLanguagePrefix(location);
+    const languagePrefix = '';
 
-    const lang = _getLanguage(location);
+    // const lang = _getLanguage(location);
+    const lang = 'en';
 
-    const dir = _getTextDirection(location);
+    // const dir = _getTextDirection(location);
+    const dir = 'ltr';
 
     return {
         languagePrefix,
