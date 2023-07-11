@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_shared_title_paragraph_images",
+  "info": {
+    "displayName": "Title Paragraph Image",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "titleHtmlTag": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "p",
+        "div",
+        "span"
+      ]
+    },
+    "imageAlt": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "string"
+    }
+  }
+}

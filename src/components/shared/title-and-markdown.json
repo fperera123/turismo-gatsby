@@ -1,0 +1,63 @@
+{
+  "collectionName": "components_shared_title_and_markdowns",
+  "info": {
+    "displayName": "Title and Markdown",
+    "icon": "align-center",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "markdown": {
+      "type": "richtext",
+      "required": true
+    },
+    "titleHtmlTag": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "p",
+        "div",
+        "span"
+      ],
+      "required": true
+    },
+    "hasLink": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "to": {
+      "type": "string",
+      "required": false,
+      "default": "N/A"
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "N/A",
+        "noon",
+        "fa-car"
+      ],
+      "required": false,
+      "default": "N/A"
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "N/A",
+        "_blank"
+      ],
+      "required": false,
+      "default": "N/A"
+    }
+  }
+}

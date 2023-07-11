@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_shared_basic_images",
+  "info": {
+    "displayName": "Basic Image",
+    "icon": "atlas",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "imageAlt": {
+      "type": "string",
+      "required": true
+    },
+    "imageTitle": {
+      "type": "string",
+      "required": true
+    },
+    "imageOrder": {
+      "type": "enumeration",
+      "enum": [
+        "first",
+        "last"
+      ],
+      "required": true,
+      "default": "first"
+    }
+  }
+}

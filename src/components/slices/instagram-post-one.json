@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_slices_instagram_post_ones",
+  "info": {
+    "displayName": "Instagram Post One",
+    "icon": "atlas"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

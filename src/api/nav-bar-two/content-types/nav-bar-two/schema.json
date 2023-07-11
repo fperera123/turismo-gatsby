@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "nav_bar_twos",
+  "info": {
+    "singularName": "nav-bar-two",
+    "pluralName": "nav-bar-twos",
+    "displayName": "Nav Bar Two",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.link-item",
+        "shared.dropdown-link"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

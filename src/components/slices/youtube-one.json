@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_slices_youtube_ones",
+  "info": {
+    "displayName": "Youtube One",
+    "icon": "audio-description"
+  },
+  "options": {},
+  "attributes": {
+    "videoId": {
+      "type": "string"
+    }
+  }
+}

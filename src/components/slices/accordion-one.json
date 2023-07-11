@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_slices_accordion_ones",
+  "info": {
+    "displayName": "Accordion One",
+    "icon": "book-medical",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleMarkdown": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.title-and-markdown"
+    },
+    "label": {
+      "type": "string"
+    },
+    "accordionItems": {
+      "displayName": "List of Title and Markdown",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.list-of-title-and-markdown"
+    }
+  }
+}
