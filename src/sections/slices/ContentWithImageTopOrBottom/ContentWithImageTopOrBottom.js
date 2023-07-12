@@ -4,8 +4,51 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Content from "../contentStyles";
 
-import listado_dulces_la_palma from "./../../../assets/clone/listado-dulces-la-palma.jpg";
-import Gastronomía_Ensalada_de_la_huerta from "./../../../assets/clone/Gastronomía-Ensalada-de-la-huerta.jpg";
+
+import Poster_Gastronomía from './../../../assets/clone/Poster-Gastronomía.jpg';
+import listado_dulces_la_palma from './../../../assets/clone/listado-dulces-la-palma.jpg';
+import Gastronomía_Ensalada_de_la_huerta from './../../../assets/clone/Gastronomía-Ensalada-de-la-huerta.jpg';
+import Gastronomía_Bienmesabe from './../../../assets/clone/Gastronomía-Bienmesabe.jpg';
+import al_horno from './../../../assets/clone/Gastronomía-Vieja-al-horno.jpg';
+import gastronomia_conejera from './../../../assets/clone/listado-gastronomia-conejera.jpg';
+import queso_canario from './../../../assets/clone/listado-amantes-del-queso-canario.jpg';
+import Guachinche_gomero from './../../../assets/clone/Guachinche-gomero.jpg';
+import banner_recursos_restaurantes_dt from './../../../assets/clone/banner-recursos-restaurantes-dt.jpg';
+import Gastronomía_La_Geria from './../../../assets/clone/Gastronomía-La-Geria.jpg';
+
+import otherImage1 from './../../../assets/clone/img1.jpg'
+import otherImage2 from './../../../assets/clone/img2.png'
+import otherImage3 from './../../../assets/clone/img3.jpg'
+import otherImage4 from './../../../assets/clone/img4.jpg'
+import otherImage5 from './../../../assets/clone/img5.jpg'
+import otherImage6 from './../../../assets/clone/img6.jpg'
+import otherImage7 from './../../../assets/clone/img7.jpg'
+import otherImage8 from './../../../assets/clone/img8.jpg'
+import otherImage9 from './../../../assets/clone/img9.jpg'
+import otherImage10 from './../../../assets/clone/img10.jpg'
+
+import footerImage1 from './../../../assets/clone/bono-la-palma-desktop-footer.jpg';
+import footerImage2 from './../../../assets/clone/la-vuelta-al-mundo-en-8-islas-dk.jpg';
+
+import facebookIcon from './../../../assets/clone/facebook-icon.png';
+import facebookIconHover from './../../../assets/clone/facebook-icon-hover.png';
+
+import instagramIcon from './../../../assets/clone/instagram-icon.png'
+import instagramIconHover from './../../../assets/clone/instagram-icon-hover.png'
+
+import twitterIcon from './../../../assets/clone/twitter-icon.png'
+import twitterIconHover from './../../../assets/clone/twitter-icon-hover.png'
+
+import youtubeIcon from './../../../assets/clone/youtube-icon.png'
+import youtubeIconHover from './../../../assets/clone/youtube-icon-hover.png'
+
+import footerImage3 from './../../../assets/clone/logo-next-generation-ES-desktop.png';
+import footerImage4 from './../../../assets/clone/logo-ministerio-resiliencia-desktop.png';
+import footerImage5 from './../../../assets/clone/logo-turismo-islas-canarias.png';
+import footerImage6 from './../../../assets/clone/logo-gobierno-canarias-desktop.png';
+
+import GASTRO_SAUZAL_140420 from './../../../assets/clone/26_GASTRO_SAUZAL_140420.mp4';
+import ROQUENUBLO_210120_loop from './../../../assets/clone/20_ROQUENUBLO_210120_loop.mp4';
 
 const compParagraph = () => {
   return (
@@ -231,7 +274,7 @@ const dynamicBlock = () => {
   );
 };
 
-export default function ContentWithImage() {
+export default function ContentWithImageTopOrBottom() {
   return (
     <>
       <div
@@ -239,23 +282,101 @@ export default function ContentWithImage() {
         data-aos-anchor-placement="top-bottom"
         data-aos-duration="300"
         data-aos-once="true"
-        class="layout hic_layout_two_03 boxed num-col--2 wrapper-layout wow fadeIn"
+        class="layout hic_layout_one_01 fullwitdh num-col--1 wrapper-layout wow fadeIn"
         data-valign1="valigntop"
-        data-valign2="valigntop"
-        id="section--f0LFUAH0lZ0"
+        id="section--ZZq-PmVkhrQ"
         data-wow-duration="0.1s"
         styles="visibility: visible; animation-duration: 0.1s; animation-name: fadeIn;"
       >
         <div class="row-wrapper">
-          <div class="row two-03">
-            <div class="column valigntop">
-              {compParagraph()} {dynamicBlock()}
-            </div>
+          <div class="row one-01">
             <div class="column"></div>
             <div class="column valigntop">
-              {compImage()}
-              {compFact()}
+              <div
+                id="me-image-paragraph-78df2c7a-dca6-4d4a-8616-999d4e251513"
+                class="block block-layout-builder block-inline-blockme-image-paragraph no-capitol-letter up text-black"
+                styles="color: #000000;"
+              >
+                <div class="">
+                  <div class="field field--name-field-me-ip-images field--type-entity-reference field--label-visually_hidden">
+                    <div class="field__label visually-hidden">Imagen</div>
+                    <div class="field__item">
+                      <article class="media media--type-imagenes-bloques media--view-mode-image-paragraph">
+                        <div class="me-im-desktop-image">
+                          <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+                            {" "}
+                            <img
+                              width="1500"
+                              height="684"
+                              alt="Bienmesabe"
+                              loading="lazy"
+                              class="image-style-image-paragraph-desktop lazyloaded"
+                              typeof="foaf:Image"
+                              src={Gastronomía_Bienmesabe}
+                            />
+                          </div>
+                        </div>
+                        <div class="me-im-mobile-image">
+                          <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+                            {" "}
+                            <img
+                              width="1500"
+                              height="684"
+                              alt="Bienmesabe"
+                              loading="lazy"
+                              class="image-style-image-paragraph-desktop lazyloaded"
+                              typeof="foaf:Image"
+                              src={Gastronomía_Bienmesabe}
+                            />
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+                <div class="ip-wrapper">
+                  <div class="ip-content">
+                    <div class="clearfix text-formatted field field--name-field-me-ip-content field--type-text-long field--label-visually_hidden">
+                      <div class="field__label visually-hidden">Contenido</div>
+                      <div class="field__item">
+                        <h2 class="tit-izquierda">Recetas locales</h2>
+
+                        <p>
+                          Son muy diversas las culturas que han dejado su huella
+                          en las islas. Y eso ha dado como resultado grandes
+                          sabores y contrastes que se pueden apreciarse en la
+                          mayoría de sus platos típicos, como las apetecibles
+                          papas arrugadas con mojo picón. Otro de los productos
+                          estrella de las Islas Canarias, presente también en
+                          muchas recetas, es el gofio. Elaborado a base de
+                          cereales tostados, como el maíz y el trigo, proviene
+                          de la época de los primeros pobladores.
+                        </p>
+
+                        <p>
+                          En la gastronomía canaria predomina el uso de las
+                          verduras locales, como sucede con el potaje de berros,
+                          las piñas de millo con papas y costillas o los
+                          bubangos rellenos, una variedad autóctona de
+                          calabacín. Otro producto ‘top’ en las recetas de las
+                          islas es el pescado, sobre todo en las elaboradas con
+                          especies autóctonas como la vieja, de delicado sabor,
+                          el cherne, el mero o el jurel. También existe una
+                          amplia variedad de postres y dulces típicos,
+                          irresistibles para los más golosos. Los deliciosos
+                          bienmesabe y príncipe Alberto, de La Palma, la leche
+                          asada gomera, el quesillo, el frangollo o las
+                          quesadillas herreñas.
+                          <br />
+                          &nbsp;
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="column"></div>
           </div>
         </div>
       </div>

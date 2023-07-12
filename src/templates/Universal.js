@@ -28,6 +28,11 @@ import logoES_DarkMenu_0_0 from '../assets/clone/logoES_DarkMenu_0_0.png';
 
 import GASTRO_SAUZAL_140420 from '../assets/clone/26_GASTRO_SAUZAL_140420.mp4';
 import ROQUENUBLO_210120_loop from '../assets/clone/20_ROQUENUBLO_210120_loop.mp4';
+import ContentWithImageTopOrBottom from "@/sections/slices/ContentWithImageTopOrBottom/ContentWithImageTopOrBottom";
+import ImageOnly from "@/sections/slices/ImageOnly/ImageOnly";
+import BannerWithButton from "@/sections/slices/BannerWithButton/BannerWithButton";
+import MorePosts from "@/sections/slices/MorePosts/MorePosts";
+import ContentWithColorBox from "@/sections/slices/ContentWithColorBox/ContentWithColorBox";
 
 // export const query = graphql`
 //   query GetSingleUniversal($slug: String, $locale: String){
@@ -488,37 +493,46 @@ export default function Home({
             }
           })
         }
-      </div>
-      <div class="layout-content">
-        <div class="region region-content">
-          <div
-            id="block-hic-front-theme-content"
-            class="block block-system block-system-main-block"
-          >
 
-            <article
-              role="article"
-              about="https://www.holaislascanarias.com/gastronomia-canaria/"
-              class="node node--type-motivation-distribution node--view-mode-full"
+        <div class="layout-content">
+          <div class="region region-content">
+            <div
+              id="block-hic-front-theme-content"
+              class="block block-system block-system-main-block"
             >
-              {
-                slices.map(slice => {
-                  switch (slice.__typename) {
-                    case "STRAPI__COMPONENT_SLICES_PARAGRAPH_ONLY":
-                      return <ParagraphOnly key={slice.id} data={slice} />
 
-                    case "STRAPI__COMPONENT_SLICES_YOUTUBE_ONE":
-                      return <YouTubeVideo key={slice.id} data={slice} />
+              <article
+                role="article"
+                class="node node--type-motivation-distribution node--view-mode-full"
+              >
+                {
+                  slices.map(slice => {
+                    switch (slice.__typename) {
+                      case "STRAPI__COMPONENT_SLICES_PARAGRAPH_ONLY":
+                        return <ParagraphOnly key={slice.id} data={slice} />
 
-                    default:
-                      return null;
-                  }
-                })
-              }
+                      case "STRAPI__COMPONENT_SLICES_YOUTUBE_ONE":
+                        return <YouTubeVideo key={slice.id} data={slice} />
 
-            </article>
+                      default:
+                        return null;
+                    }
+                  })
+                }
+
+                <ContentWithImage/>
+                <ContentWithImageTopOrBottom/>
+                <ImageOnly/>
+                <ContentWithImage/>
+                <BannerWithButton/>
+                <ContentWithImageTopOrBottom/>
+                <MorePosts/>
+                <ContentWithColorBox/>
+              </article>
+            </div>
           </div>
         </div>
+        <Footer/>
       </div>
       <div className="sm:w-1/3 hidden"></div>
 
