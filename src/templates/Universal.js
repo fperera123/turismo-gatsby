@@ -386,6 +386,11 @@ export const query = graphql`
           id
           paragraph
         }
+        ... on STRAPI__COMPONENT_SLICES_YOUTUBE_ONE {
+          __typename
+          id
+          videoId
+        }
       }
     }
   }
@@ -489,6 +494,9 @@ export default function Home({
                   switch (slice.__typename) {
                     case "STRAPI__COMPONENT_SLICES_PARAGRAPH_ONLY":
                       return <ParagraphOnly key={slice.id} data={slice} />
+
+                    case "STRAPI__COMPONENT_SLICES_YOUTUBE_ONE":
+                      return <YouTubeVideo key={slice.id} data={slice} />
 
                     default:
                       return null;

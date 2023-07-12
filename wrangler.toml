@@ -1,9 +1,9 @@
-name = "web"
+name = "tsa-content"
 type = "webpack"
 route = ''
 zone_id = ''
-usage_model = ''
+usage_model = 'bundled'
 compatibility_flags = []
 workers_dev = true
 site = {bucket = "./public",entry-point = "workers-site"}
-compatibility_date = "2023-01-10"
+compatibility_date = "2023-07-12"
