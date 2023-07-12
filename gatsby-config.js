@@ -167,6 +167,7 @@ module.exports = {
         excludes: [
           `/temp/*`,
           `/ga/*`,
+          '/new-page/*'
         ],
         resolveSiteUrl: () => siteUrl,
         serialize: ({ path, pageContext: { updatedAt } }) => {
@@ -181,8 +182,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Better Move Co`,
-        short_name: `BM`,
+        name: `Website Title`,
+        short_name: `Title`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
@@ -190,24 +191,5 @@ module.exports = {
         icon: `src/assets/image/favicon-512.png`,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          "G-PP1V6F3YLT",
-          // "G-3C6D1ZTF4F",
-        ],
-
-        gtagConfig: {
-          send_page_view: false,
-          debug_mode: false,
-        },
-
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
-    `gatsby-plugin-instagram-embed`,
   ],
 }

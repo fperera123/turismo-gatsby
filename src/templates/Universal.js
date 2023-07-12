@@ -413,6 +413,64 @@ export const query = graphql`
   }
 `
 
+export function Head({ location, data: { universal } }) {
+  const siteRoot = process.env.SITE_URL;
+
+  const {
+    metaTitle,
+    metaDescription,
+    ogTitle,
+    ogDescription,
+    ogImage,
+    jsonLD,
+
+    lang,
+    direction,
+  } = universal;
+
+  const src = getSrc(ogImage.localFile);
+
+  const { internal: { content } } = jsonLD;
+
+  return (
+    <>
+      <title>{metaTitle}</title>
+      <meta name="description" content={metaDescription} />
+
+      <meta property="og:title" content={ogTitle} />
+      <meta property="og:description" content={ogDescription} />
+      <meta property="og:url" content={`${siteRoot}${location.pathname}`} />
+      <meta property="og:image" content={`${siteRoot}${src}`} />
+
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+
+      <meta name="robots" content="index, archive, follow" />
+
+      <link rel="canonical" href={`${siteRoot}${location.pathname}`} />
+
+      <link rel="alternate" hrefLang="en" href={`${siteRoot}${location.pathname}`} />
+      <link rel="alternate" hrefLang="ar" href={`${siteRoot}/ar${location.pathname}`} />
+
+      <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-alpha13/dist/js/index.min.js"></script>
+
+      <script type="application/ld+json">
+        {
+          content
+        }
+      </script>
+
+      <Helmet
+        htmlAttributes={{
+          lang: lang,
+          dir: direction,
+        }}
+      />
+
+    </>
+  )
+}
+
 export default function Home({
   data: {
     universal:
