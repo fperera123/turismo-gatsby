@@ -1,9 +1,8 @@
 import React from 'react';
-import YouTube from 'react-youtube';
-import Poster_Gastronomía from './../../../assets/clone/Poster-Gastronomía.jpg';
+import { GatsbyImage as Img, getImage } from 'gatsby-plugin-image'
 
-
-export default function YouTubeVideo({ data: { videoId } }) {
+export default function YouTubeVideo({ data: { videoId, basicImage } }) {
+  const { image, imageAlt, imageTitle } = basicImage;
 
   return (
     <>
@@ -38,22 +37,12 @@ export default function YouTubeVideo({ data: { videoId } }) {
                       </div>
                     </div>
                   </div>
-                  <div class="info-video">
-                    <div class="video-duration">01:55</div>
-
-                    <div class="field field--name-field-me-v-title field--type-string field--label-visually_hidden">
-                      <div class="field__label visually-hidden">Title</div>
-                      <div class="field__item">Además se come bien</div>
-                    </div>
-
-                  </div>
 
                   <div class="field field--name-field-me-v-remote-video field--type-entity-reference field--label-visually_hidden">
-                    <div class="field__label visually-hidden">Video</div>
                     <div class="field__item">
                       <div class="media media--type-remote-video media--view-mode-default">
 
-                        <div class="media media--type-remote-video media--view-mode-default js-plyr" data-plyr-provider="youtube" data-plyr-embed-id="Z85VMOJsAOA">
+                        <div class="media media--type-remote-video media--view-mode-default js-plyr" data-plyr-provider="youtube" data-plyr-embed-id={videoId}>
                         </div>
                       </div>
 
@@ -61,22 +50,20 @@ export default function YouTubeVideo({ data: { videoId } }) {
                   </div>
 
                   <div class="field field--name-field-me-v-poster field--type-entity-reference field--label-visually_hidden">
-                    <div class="field__label visually-hidden">Póster</div>
                     <div class="field__item">
                       <article class="media media--type-imagenes-bloques media--view-mode-default">
 
                         <div class="me-im-desktop-image">
 
                           <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-                            <img src={Poster_Gastronomía} width="1920" height="1080" alt="Además se come bien" typeof="foaf:Image" className='min-h-[695px]' styles="min-height: 685px;" />
-
+                             <Img image={getImage(image.localFile)}  alt={imageAlt} title={imageTitle} layout="fullWidth" placeholder="blurred" width="1920" height="1080" className='min-h-[695px]' />
                           </div>
 
                         </div>
                         <div class="me-im-mobile-image">
 
                           <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-                            <img src={Poster_Gastronomía} width="1920" height="1080" alt="Además se come bien" typeof="foaf:Image" />
+                            <Img image={getImage(image.localFile)}  alt={imageAlt} title={imageTitle} layout="fullWidth" placeholder="blurred" width="1920" height="1080" />
 
                           </div>
 
@@ -85,12 +72,6 @@ export default function YouTubeVideo({ data: { videoId } }) {
                       </article>
                     </div>
                   </div>
-
-                  <div class="field field--name-field-me-v-type field--type-list-string field--label-visually_hidden">
-                    <div class="field__label visually-hidden">Tipo</div>
-                    <div class="field__item">Ancho completo</div>
-                  </div>
-
                 </div>
               </div>
 

@@ -390,6 +390,18 @@ export const query = graphql`
           __typename
           id
           videoId
+          basicImage {
+            imageAlt
+            imageOrder
+            imageTitle
+            image {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+          }
         }
       }
     }
