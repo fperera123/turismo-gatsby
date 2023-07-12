@@ -450,7 +450,6 @@ export function Head({ location, data: { universal } }) {
       <link rel="canonical" href={`${siteRoot}${location.pathname}`} />
 
       <link rel="alternate" hrefLang="en" href={`${siteRoot}${location.pathname}`} />
-      <link rel="alternate" hrefLang="ar" href={`${siteRoot}/ar${location.pathname}`} />
 
       <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-alpha13/dist/js/index.min.js"></script>
 
