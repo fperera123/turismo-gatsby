@@ -25,6 +25,12 @@ const strapiConfig = {
             titleVideo: {
               populate: '*',
             },
+            content: {
+              populate: '*',
+            },
+            richContent: {
+              populate: '*',
+            },
             titleParagraph: {
               populate: '*',
             },

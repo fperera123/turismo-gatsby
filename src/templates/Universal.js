@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { graphql } from 'gatsby';
+import { graphql } from "gatsby";
 import { PageWrapper } from "~components/Core";
 import _ from "lodash";
 // import 'tw-elements';
@@ -14,25 +14,26 @@ import AccordionOne from "@/sections/slices/Accordion/AccordionOne";
 import Navbar from "@/sections/Navbar";
 import TopBar from "@/sections/TopBar";
 import GalleryOne from "@/sections/slices/Gallery/GalleryOne";
-import { GatsbyImage as Img, getSrc, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage as Img, getSrc, getImage } from "gatsby-plugin-image";
 import { Helmet } from "react-helmet";
-import NotificationModalOne from '../sections/PopupModal/NotificationModalOne/NotificationModalOne';
+import NotificationModalOne from "../sections/PopupModal/NotificationModalOne/NotificationModalOne";
 import NavbarTwo from "@/sections/Navbar/NavbarTwo";
 import InstagramPost from "@/sections/slices/InstagramPost";
 import YouTubeVideo from "@/sections/slices/YouTubeVideo";
 import ParagraphOnly from "@/sections/slices/ParagraphOnly/ParagraphOnly";
 
-import logoES_DarkMenu_0 from '../assets/clone/logoES_DarkMenu_0.png';
-import logoES_Hover_0_0 from '../assets/clone/logoES_Hover_0_0.png';
-import logoES_DarkMenu_0_0 from '../assets/clone/logoES_DarkMenu_0_0.png';
+import logoES_DarkMenu_0 from "../assets/clone/logoES_DarkMenu_0.png";
+import logoES_Hover_0_0 from "../assets/clone/logoES_Hover_0_0.png";
+import logoES_DarkMenu_0_0 from "../assets/clone/logoES_DarkMenu_0_0.png";
 
-import GASTRO_SAUZAL_140420 from '../assets/clone/26_GASTRO_SAUZAL_140420.mp4';
-import ROQUENUBLO_210120_loop from '../assets/clone/20_ROQUENUBLO_210120_loop.mp4';
+import GASTRO_SAUZAL_140420 from "../assets/clone/26_GASTRO_SAUZAL_140420.mp4";
+import ROQUENUBLO_210120_loop from "../assets/clone/20_ROQUENUBLO_210120_loop.mp4";
 import ContentWithImageTopOrBottom from "@/sections/slices/ContentWithImageTopOrBottom/ContentWithImageTopOrBottom";
 import ImageOnly from "@/sections/slices/ImageOnly/ImageOnly";
 import BannerWithButton from "@/sections/slices/BannerWithButton/BannerWithButton";
 import MorePosts from "@/sections/slices/MorePosts/MorePosts";
 import ContentWithColorBox from "@/sections/slices/ContentWithColorBox/ContentWithColorBox";
+import PageContent from "@/sections/slices/PageContent/PageContent";
 
 // export const query = graphql`
 //   query GetSingleUniversal($slug: String, $locale: String){
@@ -335,11 +336,9 @@ import ContentWithColorBox from "@/sections/slices/ContentWithColorBox/ContentWi
 // }
 
 export const query = graphql`
-  query GetSingleUniversal($slug: String, $locale: String ){
-
-    navBarTwo: strapiNavBarTwo  (locale: {eq: $locale}){
+  query GetSingleUniversal($slug: String, $locale: String) {
+    navBarTwo: strapiNavBarTwo(locale: { eq: $locale }) {
       sections {
-
         ... on STRAPI__COMPONENT_SHARED_LINK_ITEM {
           __typename
           id
@@ -351,14 +350,14 @@ export const query = graphql`
       }
     }
 
-    universal: strapiUniversal(slug: {eq: $slug}) {
+    universal: strapiUniversal(slug: { eq: $slug }) {
       id
       slug
 
-      metaTitle,
-      metaDescription,
-      ogTitle,
-      ogDescription,
+      metaTitle
+      metaDescription
+      ogTitle
+      ogDescription
       ogImage {
         localFile {
           childImageSharp {
@@ -366,8 +365,8 @@ export const query = graphql`
           }
         }
       }
-      jsonLD{
-        internal{
+      jsonLD {
+        internal {
           content
         }
       }
@@ -376,224 +375,111 @@ export const query = graphql`
       direction
 
       slices {
-        ... on STRAPI__COMPONENT_SLICES_HERO_ONE {
-            __typename
-            id
-            titleVideo{
-                title
-                video {
-                  url
-                }
-            }
-          }
-        ... on STRAPI__COMPONENT_SLICES_PARAGRAPH_ONLY {
+        ... on STRAPI__COMPONENT_SLICES_PAGE_CONTENT {
           __typename
           id
-          paragraph
-        }
-        ... on STRAPI__COMPONENT_SLICES_YOUTUBE_ONE {
-          __typename
-          id
-          videoId
-          basicImage {
-            imageAlt
-            imageOrder
-            imageTitle
-            image {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData
-                }
-              }
-            }
-          }
+          content
         }
       }
     }
   }
-`
+`;
 
-export function Head({ location, data: { universal } }) {
-  const siteRoot = process.env.SITE_URL;
+// export function Head({ location, data: { universal } }) {
+//   const siteRoot = process.env.SITE_URL;
 
-  const {
-    metaTitle,
-    metaDescription,
-    ogTitle,
-    ogDescription,
-    ogImage,
-    jsonLD,
+//   const {
+//     metaTitle,
+//     metaDescription,
+//     ogTitle,
+//     ogDescription,
+//     ogImage,
+//     jsonLD,
 
-    lang,
-    direction,
-  } = universal;
+//     lang,
+//     direction,
+//   } = universal;
 
-  const src = getSrc(ogImage.localFile);
+//   const src = getSrc(ogImage.localFile);
 
-  const { internal: { content } } = jsonLD;
+//   // const { internal: { content } } = jsonLD;
 
-  return (
-    <>
-      <title>{metaTitle}</title>
-      <meta name="description" content={metaDescription} />
+//   return (
+//     <>
+//       <title>{metaTitle}</title>
+//       <meta name="description" content={metaDescription} />
 
-      <meta property="og:title" content={ogTitle} />
-      <meta property="og:description" content={ogDescription} />
-      <meta property="og:url" content={`${siteRoot}${location.pathname}`} />
-      <meta property="og:image" content={`${siteRoot}${src}`} />
+//       <meta property="og:title" content={ogTitle} />
+//       <meta property="og:description" content={ogDescription} />
+//       <meta property="og:url" content={`${siteRoot}${location.pathname}`} />
+//       <meta property="og:image" content={`${siteRoot}${src}`} />
 
-      <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary_large_image" />
+//       <meta property="og:type" content="website" />
+//       <meta name="twitter:card" content="summary_large_image" />
 
-      <meta name="robots" content="index, archive, follow" />
+//       <meta name="robots" content="index, archive, follow" />
 
-      <link rel="canonical" href={`${siteRoot}${location.pathname}`} />
+//       <link rel="canonical" href={`${siteRoot}${location.pathname}`} />
 
-      <link rel="alternate" hrefLang="en" href={`${siteRoot}${location.pathname}`} />
+//       <link
+//         rel="alternate"
+//         hrefLang="en"
+//         href={`${siteRoot}${location.pathname}`}
+//       />
 
-      <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-alpha13/dist/js/index.min.js"></script>
+//       <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-alpha13/dist/js/index.min.js"></script>
 
-      <script type="application/ld+json">
-        {
-          content
-        }
-      </script>
+//       {/* <script type="application/ld+json">
+//         {
+//           content
+//         }
+//       </script> */}
 
-      <Helmet
-        htmlAttributes={{
-          lang: lang,
-          dir: direction,
-        }}
-      />
-
-    </>
-  )
-}
+//       <Helmet
+//         htmlAttributes={{
+//           lang: lang,
+//           dir: direction,
+//         }}
+//       />
+//     </>
+//   );
+// }
 
 export default function Home({
   data: {
-    universal:
-    {
-      slices,
-      direction
-    },
-    navBarTwo: {
-      sections,
-    },
-  }
+    universal: { slices, direction },
+    navBarTwo: { sections },
+  },
 }) {
-
   useEffect(() => {
     const interval = setInterval(() => {
-      const element = document ? document.querySelectorAll('#portal-5c3b767d-0f72-4519-88d5-142378a21309 a[target="_blank"]') : null
+      const element = document
+        ? document.querySelectorAll(
+            '#portal-5c3b767d-0f72-4519-88d5-142378a21309 a[target="_blank"]'
+          )
+        : null;
       if (element.length > 0) {
         element[0].remove();
       }
     }, 1000);
 
     return () => {
-      clearInterval(interval)
-    }
-  }, [])
-
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
-    <PageWrapper>
-      {/* <TopBar />
+    <>
+        {slices.map((slice) => {
+          console.log(slice);
+          switch (slice.__typename) {
+            case "STRAPI__COMPONENT_SLICES_PAGE_CONTENT":
+              return <PageContent key={slice.id} data={slice} />;
 
-      {slices.map(slice => {
-        switch (slice.__typename) {
-          case "STRAPI__COMPONENT_SLICES_PARAGRAPH_WITH_TITLE":
-            return <ContentPlain key={slice.id} data={slice} />
-
-          case "STRAPI__COMPONENT_SLICES_HERO_ONE":
-            return <HeroOne key={slice.id} data={slice} />
-
-          case "STRAPI__COMPONENT_SLICES_CONTENT_WITH_IMAGE":
-            return <ContentWithImage key={slice.id} data={slice} />
-
-          case "STRAPI__COMPONENT_SLICES_CONTENT_WITH_IMAGE_AND_LIST":
-            return <ContentWithImageAndList key={slice.id} data={slice} />
-
-          case "STRAPI__COMPONENT_SLICES_REVIEW_ONE":
-            return <Reviews key={slice.id} data={slice} />
-
-          case "STRAPI__COMPONENT_SLICES_GALLERY_ONE":
-            return <GalleryOne key={slice.id} data={slice} />
-
-          case "STRAPI__COMPONENT_SLICES_ACCORDION_ONE":
-            return <AccordionOne key={slice.id} data={slice} />
-
-          case "STRAPI__COMPONENT_SLICES_INSTAGRAM_POST_ONE":
-            return <InstagramPost key={slice.id} data={slice} />
-
-          case "STRAPI__COMPONENT_SLICES_YOUTUBE_ONE":
-            return <YouTubeVideo key={slice.id} data={slice} />
-
-          case "STRAPI__COMPONENT_SLICES_NOTIFICATION_MODAL_ONE":
-            return <NotificationModalOne key={slice.id} data={slice} />
-
-          default:
-            return null;
-        }
-      })} */}
-      <div class="page-content">
-        <NavbarTwo direction={direction} sections={sections} />
-        {
-          slices.map(slice => {
-            switch (slice.__typename) {
-              case "STRAPI__COMPONENT_SLICES_HERO_ONE":
-                return <HeroOne key={slice.id} data={slice} />
-
-              default:
-                return null;
-            }
-          })
-        }
-
-        <div class="layout-content">
-          <div class="region region-content">
-            <div
-              id="block-hic-front-theme-content"
-              class="block block-system block-system-main-block"
-            >
-
-              <article
-                role="article"
-                class="node node--type-motivation-distribution node--view-mode-full"
-              >
-                {
-                  slices.map(slice => {
-                    switch (slice.__typename) {
-                      case "STRAPI__COMPONENT_SLICES_PARAGRAPH_ONLY":
-                        return <ParagraphOnly key={slice.id} data={slice} />
-
-                      case "STRAPI__COMPONENT_SLICES_YOUTUBE_ONE":
-                        return <YouTubeVideo key={slice.id} data={slice} />
-
-                      default:
-                        return null;
-                    }
-                  })
-                }
-
-                <ContentWithImage/>
-                <ContentWithImageTopOrBottom/>
-                <ImageOnly/>
-                <ContentWithImage/>
-                <BannerWithButton/>
-                <ContentWithImageTopOrBottom/>
-                <MorePosts/>
-                <ContentWithColorBox/>
-              </article>
-            </div>
-          </div>
-        </div>
-        <Footer/>
-      </div>
-      <div className="sm:w-1/3 hidden"></div>
-
-    </PageWrapper>
-
-  )
+            default:
+              return null;
+          }
+        })}
+    </>
+  );
 }
