@@ -7,10 +7,10 @@
   },
   "options": {},
   "attributes": {
-    "titleParagraphImage": {
+    "titleVideo": {
       "type": "component",
-      "repeatable": true,
-      "component": "shared.title-paragraph-image"
+      "repeatable": false,
+      "component": "shared.title-video"
     }
   }
 }

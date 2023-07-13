@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_slices_paragraph_onlies",
+  "info": {
+    "displayName": "Paragraph Only",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "paragraph": {
+      "type": "text"
+    }
+  }
+}

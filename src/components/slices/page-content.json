@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_slices_page_contents",
+  "info": {
+    "displayName": "Page Content",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
