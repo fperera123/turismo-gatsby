@@ -17,76 +17,17 @@ const strapiConfig = {
     },
     queryParams: {
       populate: {
-        ogImage: {
-          populate: '*',
-        },
         'slices': {
           populate: {
-            titleVideo: {
-              populate: '*',
-            },
             content: {
               populate: '*',
             },
-            richContent: {
-              populate: '*',
-            },
-            titleParagraph: {
-              populate: '*',
-            },
-            titleParagraphImage: {
-              populate: '*',
-            },
-            titleMarkdown: {
-              populate: '*',
-            },
-            titleMarkdownImage: {
-              populate: '*',
-            },
-            unorderedList: {
-              populate: '*',
-            },
-            reviewOneItem: {
-              populate: '*',
-            },
-            accordionItems: {
-              populate: '*',
-              item: {
-                populate: '*',
-              }
-            },
-            imageGrid: {
-              populate: '*',
-            },
-            basicImage: {
-              populate: '*',
-            },
-            promotion: {
-              populate: '*',
-            },
           }
-        },
-        ogImage: {
-          populate: '*',
-        },
-        jsonLD: {
-          populate: '*',
         },
       },
     },
   }],
   singleTypes: [
-    {
-      singularName: 'main-menu',
-      pluginOptions: {
-        i18n: {
-          locale: 'all', // Fetch all localizations
-        },
-      },
-      queryParams: {
-        populate: '*',
-      },
-    },
     {
       singularName: 'nav-bar-two',
       pluginOptions: {
@@ -184,7 +125,6 @@ module.exports = {
         },
       },
     },
-
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

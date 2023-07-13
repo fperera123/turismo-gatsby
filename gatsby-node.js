@@ -40,8 +40,6 @@ exports.createPages = ({ actions, graphql }) => {
           edges {
             node {
               slug
-              lang
-              locale
               updatedAt
             }
           }
@@ -51,19 +49,7 @@ exports.createPages = ({ actions, graphql }) => {
     console.log(result);
     // Create pages for each universal.
     result.data.allStrapiUniversal.edges.forEach(({ node }) => {
-      let pagePath = ''
-      if (node.slug == '#home-ar') {
-        pagePath = '/ar/'
-      }
-      else if (node.slug == '#home-en') {
-        pagePath = '/'
-      }
-      else if(node.locale == "en"){
-        pagePath = node.slug
-      }
-      else if(node.locale == "ar-KW"){
-        pagePath =  '/ar' + node.slug;
-      }
+      let pagePath = node.slug;
       createPage({
         path: pagePath,
         component: path.resolve(`src/templates/Universal.js`),
